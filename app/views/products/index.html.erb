@@ -24,7 +24,7 @@ debugger
         var orderList = ""
 
         orders.forEach(function(order) {
-          orderList += '<li class'
+          orderList += '<li class="js-order" data-id="' + order["id"] + '">' + order["id"] + ' - ' + order["created_at"] + '</li>';
         })
 
 
