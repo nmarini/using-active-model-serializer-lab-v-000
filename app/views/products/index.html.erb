@@ -26,8 +26,7 @@ debugger
         orders.forEach(function(order) {
           orderList += '<li class="js-order" data-id="' + order["id"] + '">' + order["id"] + ' - ' + order["created_at"] + '</li>';
         })
-
-
+      $("#product-" + id + "-orders").html(orderList);
     });
   });
 });
