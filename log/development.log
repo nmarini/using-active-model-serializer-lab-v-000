@@ -2197,3 +2197,33 @@ Processing by ProductsController#show as JSON
 Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/products/22" for 67.189.250.128 at 2019-06-28 23:36:07 +0000
+Cannot render console from 67.189.250.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 311ms (Views: 281.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 67.189.250.128 at 2019-06-28 23:36:13 +0000
+Cannot render console from 67.189.250.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/21.json" for 67.189.250.128 at 2019-06-28 23:36:15 +0000
+Cannot render console from 67.189.250.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 21]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (54.54ms)
+Completed 200 OK in 103ms (Views: 101.0ms | ActiveRecord: 1.2ms)
+
+
