@@ -2043,3 +2043,12 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/products" for 67.189.250.128 at 2019-06-28 21:56:16 +0000
+Cannot render console from 67.189.250.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
